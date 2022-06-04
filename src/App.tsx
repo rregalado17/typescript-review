@@ -29,9 +29,34 @@ function printName(name: string) {
 }
 printName("Rob")
 
-//If you want to provide any type, use keyword any.
+//If you want to provide any type, use keyword any. If yo dont know what type it will be, you could include unknown. 
+//Void returns undefined and never returns nothing.
 
-function App() {
+//type vs interface: both can be extended and pass down properties from one type to another but in different ways.
+//You can also extend properties from type to interface using extends and interface to type using "&."
+type X = {
+  a: string;
+  b: number;
+} 
+type Y = X & {
+  c: string;
+  d: number;
+}
+// let y: Y = {
+//   c: "word",
+//   d: 42
+// }
+
+interface Person2 {
+  name: string;
+  age: number;
+}
+
+interface Guy extends Person2 {
+  profession: string;
+}
+
+const App = () => {
   return (
     <div className="App">
       Hello World.
