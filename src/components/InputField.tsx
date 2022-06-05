@@ -12,7 +12,10 @@ export const InputField = ({ todo, setTodo }: Props) => {
         <input
             className='input_box' 
             type='input' 
-            placeholder='Enter a task' >
+            placeholder='Enter a task' 
+            value={todo}
+            onChange={(e) => setTodo(e.target.value)}
+        >
         </input> 
         <button className='input_submit' type='submit'>
             Go
