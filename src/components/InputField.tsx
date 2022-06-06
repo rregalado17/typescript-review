@@ -4,9 +4,10 @@ import './styles.css';
 interface Props {
     todo:string;
     setTodo: React.Dispatch<React.SetStateAction<string>>;
+    handleAdd: () => void;
 }
 
-export const InputField = ({ todo, setTodo }: Props) => {
+export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   return (
     <form className='input'>
         <input
