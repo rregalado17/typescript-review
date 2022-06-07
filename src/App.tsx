@@ -22,7 +22,10 @@ console.log(todos)
     <div className="App">
       <span className="heading">Taskii</span> 
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      <TodoList />
+      {/* <TodoList /> */}
+      {todos.map((t) => (
+        <li>{t.todo}</li>
+      ))}
     </div>
   );
 }
