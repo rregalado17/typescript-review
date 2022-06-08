@@ -25,7 +25,12 @@ console.log(todos)
     <div className="App">
       <span className="heading">Taskii</span> 
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      <TodoList todos={todos} setTodos={setTodos}/>
+      <TodoList 
+        todos={todos} 
+        setTodos={setTodos}
+        completedTodos={completedTodos} 
+        setCompletedTodos={setCompletedTodos}
+      />
     </div>
   );
 }
