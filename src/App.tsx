@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import {InputField} from './components/InputField'
+import { InputField } from './components/InputField'
 import TodoList from './components/TodoList';
 import { Todo } from "./model"
 
@@ -10,7 +10,7 @@ const App:React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
   const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
-  
+   
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
