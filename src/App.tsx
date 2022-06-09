@@ -3,6 +3,7 @@ import './App.css';
 import { InputField } from './components/InputField'
 import TodoList from './components/TodoList';
 import { Todo } from "./model"
+import { DragDropContext } from 'react-beautiful-dnd'
 
 
 const App:React.FC = () => {
@@ -16,22 +17,24 @@ const App:React.FC = () => {
 
     if(todo) {
       setTodos([...todos, {id: Date.now(), todo:todo, isDone: false}])
-      setTodo("")
+      setTodo("") 
     }
   };
 
 console.log(todos)
   return (
-    <div className="App">
-      <span className="heading">Taskii</span> 
-      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      <TodoList 
-        todos={todos} 
-        setTodos={setTodos}
-        completedTodos={completedTodos} 
-        setCompletedTodos={setCompletedTodos}
-      />
-    </div>
+    <DragDropContext onDragEnd={() => {}}>
+      <div className="App">
+        <span className="heading">Taskii</span> 
+        <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+        <TodoList 
+          todos={todos} 
+          setTodos={setTodos}
+          completedTodos={completedTodos} 
+          setCompletedTodos={setCompletedTodos}
+        />
+      </div>
+    </DragDropContext>
   );
 }
 
