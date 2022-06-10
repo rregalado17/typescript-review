@@ -46,7 +46,7 @@
 
 .container {
     display: flex;
-    width: 95;
+    width: 95%;
     margin-top: 10px;
     justify-content: space-between;
     align-items: flex-start;
@@ -107,14 +107,13 @@
     .input {
         width: 95%;
     }
-    .todos {
-        width: 95%;
-        margin-bottom: 10px;
-    }
-
     .container {
         width: 95%;
         flex-direction: column;
+    }
+    .todos {
+        width: 95%;
+        margin-bottom: 10px;
     }
 }
 
